@@ -3,8 +3,9 @@ package ru.job4j.loop;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+/**
+ * 5.4. Протеиновая диета [#156313]
+ */
 public class FitnessTest {
 
     @Test
