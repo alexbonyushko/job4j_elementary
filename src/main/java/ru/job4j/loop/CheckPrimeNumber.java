@@ -12,7 +12,6 @@ public class CheckPrimeNumber {
                 break;
             } else if ((number % number == 0) && (number % 1 == 0)) {
                 prime = true;
-                break;
             }
         }
         return prime;
