@@ -49,15 +49,12 @@ public class Condition {
     }
 
     public static boolean checkYear(int year) {
-        boolean rsl = false;
-        if (year % 400 == 0) {
-            rsl = true;
+        if (year % 400 == 0 || year % 4 == 0) {
+            return true;
         } else if (year % 100 == 0) {
-            rsl = false;
-        } else if (year % 4 == 0) {
-            rsl = true;
+          return false;
         }
-        return rsl;
+        return false;
     }
 
     public static boolean checkAttackRook(String left, String right) {
@@ -153,7 +150,7 @@ public class Condition {
 
     public static int sectionCount(int length, int section) {
         int count = 0;
-        while (section  <= length) {
+        while (section <= length) {
             section++;
             count++;
         }
