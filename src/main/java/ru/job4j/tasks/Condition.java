@@ -158,19 +158,19 @@ public class Condition {
     }
 
     public static void main(String[] args) {
-//        System.out.println(countCup(7, 6));
-//        System.out.println(selectAction(6, 2, 3));
-//        System.out.println(checkNumberHelloWorld(5));
-//        System.out.println(checkYear(1800));
-//        out(10);
-//        outFromMToN(10,6);
-//        SweetPrice(10);
-//        System.out.println(multiplicationLoop(1, 3));
-//        System.out.println(degreeLoop(2, 3));
-        //multipliers(6);
-//        System.out.println(oddCount(1,5));
-//        System.out.println("count" + "=" + oddCount(1, 4));
-//        System.out.println(secondSum(3, 10));
+        System.out.println(countCup(7, 6));
+        System.out.println(selectAction(6, 2, 3));
+        System.out.println(checkNumberHelloWorld(5));
+        System.out.println(checkYear(1800));
+        out(10);
+        outFromMToN(10,6);
+        sweetPrice(10);
+        System.out.println(multiplicationLoop(1, 3));
+        System.out.println(degreeLoop(2, 3));
+        multipliers(6);
+        System.out.println(oddCount(1,5));
+        System.out.println("count" + "=" + oddCount(1, 4));
+        System.out.println(secondSum(3, 10));
         System.out.println(sectionCount(4, 2));
 
     }

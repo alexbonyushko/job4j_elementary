@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
 /**
- * 6.0.1. Объявление массива.[#3613]
+ * 6.0.1. Объявление массива. [#3613]
  */
 public class ArrayDefinition {
     public static void main(String[] args) {
