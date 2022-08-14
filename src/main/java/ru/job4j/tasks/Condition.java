@@ -82,10 +82,99 @@ public class Condition {
         return result;
     }
 
+    public static void out(int n) {
+        for (int i = n; i >= 0; i--) {
+            if (i < n) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static void outFromMToN(int m, int n) {
+        while (m > n) {
+            System.out.println(m);
+            m--;
+        }
+    }
+
+    public static void sweetPrice(int price) {
+        for (int weight = 1; weight <= 5; weight++) {
+            System.out.println(weight * price);
+        }
+    }
+
+    public static int multiplicationLoop(int a, int b) {
+        int res = 1;
+        for (int i = a; i <= b; i++) {
+            res *= i;
+        }
+        return res;
+    }
+
+    public static int degreeLoop(int a, int n) {
+        int res = 1;
+        for (int i = 1; i <= n; i++) {
+            res = res * a;
+        }
+        return res;
+    }
+
+    public static void multipliers(int n) {
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static int oddCount(int a, int b) {
+        int count = 0;
+        for (int i = a; i <= b; i++) {
+            if (i % 2 == 1) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static int secondSum(int a, int b) {
+        int result = 0;
+        int count = 0;
+        for (int i = a; i <= b; i++) {
+            System.out.println("index = " + i + " | " + "count = " + count);
+            if (count % 2 == 0) {
+                result = result + i;
+            }
+            count++;
+
+        }
+        return result;
+    }
+
+    public static int sectionCount(int length, int section) {
+        int count = 0;
+        while (section  <= length) {
+            section++;
+            count++;
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
-        System.out.println(countCup(7, 6));
-        System.out.println(selectAction(6, 2, 3));
-        System.out.println(checkNumberHelloWorld(5));
-        System.out.println(checkYear(1800));
+//        System.out.println(countCup(7, 6));
+//        System.out.println(selectAction(6, 2, 3));
+//        System.out.println(checkNumberHelloWorld(5));
+//        System.out.println(checkYear(1800));
+//        out(10);
+//        outFromMToN(10,6);
+//        SweetPrice(10);
+//        System.out.println(multiplicationLoop(1, 3));
+//        System.out.println(degreeLoop(2, 3));
+        //multipliers(6);
+//        System.out.println(oddCount(1,5));
+//        System.out.println("count" + "=" + oddCount(1, 4));
+//        System.out.println(secondSum(3, 10));
+        System.out.println(sectionCount(4, 2));
+
     }
 }
