@@ -10,7 +10,6 @@ public class Min {
             if (min > array[index]) {
                 min = array[index];
             }
-
         }
         return min;
     }
