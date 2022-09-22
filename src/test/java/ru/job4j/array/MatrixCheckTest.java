@@ -6,8 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * 6.7.1. Моно строка в матрице. [#214126] test
- * 6.7.2. Моно столбец в матрице. [#214127] test
- * 6.7.3. Массив из диагонали матрицы. [#214128] test
  */
 public class MatrixCheckTest {
     @Test
@@ -34,6 +32,9 @@ public class MatrixCheckTest {
         assertThat(result).isFalse();
     }
 
+    /**
+     * 6.7.2. Моно столбец в матрице. [#214127 #345331] test
+     */
     @Test
     public void whenHasMonoVertical() {
         char[][] input = {
@@ -58,6 +59,9 @@ public class MatrixCheckTest {
         assertThat(result).isFalse();
     }
 
+    /**
+     * * 6.7.3. Массив из диагонали матрицы. [#214128] test
+     */
     @Test
     public void whenDiagonalFullX() {
         char[][] input = {
@@ -92,5 +96,47 @@ public class MatrixCheckTest {
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expected = {'X', 'Y', 'Z'};
         assertThat(result).containsExactly(expected);
+    }
+
+    /**
+     * 6.7.4. Выигрышные комбинации в сокобан [#53859] test
+     */
+    @Test
+    public void whenDataMonoByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    public void whenDataNotMonoByTrueThenFalse() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    public void whenDataHMonoByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isTrue();
     }
 }
