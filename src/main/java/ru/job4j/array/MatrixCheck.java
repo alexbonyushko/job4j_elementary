@@ -3,6 +3,7 @@ package ru.job4j.array;
 /**
  * 6.7.1. Моно строка в матрице. [#214126]
  * 6.7.2. Моно столбец в матрице. [#214127]
+ * 6.7.3. Массив из диагонали матрицы. [#214128]
  */
 public class MatrixCheck {
     public static boolean monoHorizontal(char[][] board, int row) {
@@ -25,5 +26,14 @@ public class MatrixCheck {
             }
         }
         return result;
+    }
+
+    public static char[] extractDiagonal(char[][] board) {
+        char[] rsl = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            rsl[i] = board[i][i];
+        }
+
+        return rsl;
     }
 }
